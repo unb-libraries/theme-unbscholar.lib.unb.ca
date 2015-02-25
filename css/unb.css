@@ -1,0 +1,24 @@
+div#home-search-block {
+padding-top: 30px;
+padding-bottom: 15px;
+}
+
+#home-search-block #edit-islandora-simple-search-query {
+min-width : 300px;
+}
+
+h1.page-header {
+  padding-top:0px;
+}
+
+.views-field.views-field-PID {
+  padding : 15px;
+}
+
+#block-system-main > div > div.view-content > table > tbody > tr  div.views-field.views-field-MADS-fullname-ms {
+  text-align : center;
+}
+
+.views-exposed-form {
+  padding-top:25px;
+}
