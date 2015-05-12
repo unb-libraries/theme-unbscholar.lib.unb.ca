@@ -1,4 +1,4 @@
-name = bootswatch
+name = UNB Scholar Theme
 description = A Bootstrap Sub-theme.
 core = 7.x
 base theme = bootstrap
