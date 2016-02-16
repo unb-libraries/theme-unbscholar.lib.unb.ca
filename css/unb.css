@@ -1,46 +1,109 @@
-div#home-search-block {
-padding-top: 30px;
-padding-bottom: 15px;
+/* Main Menu bar overrides */
+#menu-bar-wrapper {
+  background: #b81e0d;
+}
+#menu-bar-wrapper ul.menu li {
+  background: none;
+}
+#menu-bar-wrapper ul.menu li a.active {
+  background: #434343;
+}
+#menu-bar-wrapper a:focus,
+#menu-bar-wrapper a:hover {
+  color: #d9d9d9;
+}
+#menu-bar-wrapper ul.menu ul {
+  border: none;
+}
+.responsive-menu-button:before {
+  content: '\f0c9 ';
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: larger;
+  font-style: normal;
+  font-weight: normal;
+  margin-right: 3px;
+  text-decoration: inherit;
 }
 
+/* Search button overrides */
+input.form-submit {
+  text-transform: capitalize;
+}
+
+/* Front Search block overrides */
+#home-search-block {
+  text-align: center;
+}
 #home-search-block #edit-islandora-simple-search-query {
-min-width : 300px;
+  width: 49%;
 }
 
-h1.page-header {
-  padding-top:0px;
+.table {
+  width: 100%;
 }
 
-.views-field.views-field-PID {
-  padding : 15px;
+/* Pager Overrides*/
+ul.pager {
+  margin: 1em 0;
 }
-
-#block-system-main > div > div.view-content > table > tbody > tr  div.views-field.views-field-MADS-fullname-ms {
-  text-align : center;
+.item-list {
+  width: 100%;
 }
-
-.views-exposed-form {
-  padding-top:25px;
+.item-list ul.pager li.pager-current,
+.item-list ul.pager li.pager-ellipsis,
+.item-list ul li a {
+  padding: .5em 1em;
 }
-
-.navbar-inverse .navbar-brand {
+.item-list ul li a {
+  background: #434343;
   color: #fff;
 }
-.navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-brand:focus {
-  color: #fac0ba;
+.item-list ul li a:focus,
+.item-list ul li a:hover {
+  background: #b81e0d;
 }
-.navbar-inverse .navbar-text {
+
+/* Footer overrides */
+#breadcrumb-wrapper {
+  border-top: none;
+  margin: 0;
+}
+#breadcrumb-wrapper .element-invisible {
+  display: none;
+}
+#breadcrumb-wrapper ol li a:focus,
+#breadcrumb-wrapper ol li a:hover,
+#breadcrumb-wrapper ol li a:active {
+  color: #333;
+}
+
+#footer-wrapper .container {
+  background: none;
+}
+#footer-wrapper .grid-inner {
+  background: #434343;
+  border-radius: 5px;
+  border-top: none;
+  margin: 0;
+  padding: 15px 10px;
+}
+a.btn-btt {
+  background: #434343;
   color: #fff;
+  padding: .5em 1em;
 }
-.navbar-inverse .navbar-nav > li > a {
-  color: #fff;
+a.btn-btt:focus,
+a.btn-btt:hover {
+  background: #b81e0d;
 }
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus {
-  color: #fac0ba;
+
+/* Hide facet '+' and '-' links */
+.plusminus {
+  display: none;
 }
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-  color: #fac0ba;
+
+/* Islandora solr search results consistent table row border */
+.table td {
+  border-bottom: 1px dotted #ccc;
 }
