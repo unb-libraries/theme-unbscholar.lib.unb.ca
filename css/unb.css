@@ -1,4 +1,4 @@
-/* Main Menu bar overrides */
+/* Superfish Menu bar */
 #menu-bar-wrapper {
   background: #b81e0d;
 }
@@ -15,6 +15,12 @@
 #menu-bar-wrapper ul.menu ul {
   border: none;
 }
+#menu-bar-wrapper ul.menu li a:hover,
+#menu-bar-wrapper ul.menu li a:focus,
+#menu-bar-wrapper ul.menu li a:active,
+#menu-bar-wrapper ul.menu li a.active {
+  background: #2f2f2f;
+}
 .responsive-menu-button:before {
   content: '\f0c9 ';
   display: inline-block;
@@ -26,12 +32,26 @@
   text-decoration: inherit;
 }
 
-/* Search button overrides */
-input.form-submit {
+/* Sidebar Search */
+.block-islandora-solr #edit-simple {
+  border-spacing: 2px;
+  display: table;
+  width: 100%;
+}
+.block-islandora-solr .form-item-islandora-simple-search-query,
+.block-islandora-solr .edit-submit {
+  display: table-cell;
+}
+.block-islandora-solr .form-item-islandora-simple-search-query,
+.block-islandora-solr #edit-islandora-simple-search-query {
+  width: 100%;
+}
+span.button input.form-submit {
+  background: #434343;
   text-transform: capitalize;
 }
 
-/* Front Search block overrides */
+/* Front Search panel */
 #home-search-block {
   text-align: center;
 }
@@ -43,7 +63,7 @@ input.form-submit {
   width: 100%;
 }
 
-/* Pager Overrides*/
+/* Pager */
 ul.pager {
   margin: 1em 0;
 }
@@ -64,7 +84,7 @@ ul.pager {
   background: #b81e0d;
 }
 
-/* Footer overrides */
+/* Footer */
 #breadcrumb-wrapper {
   border-top: none;
   margin: 0;
@@ -88,14 +108,54 @@ ul.pager {
   margin: 0;
   padding: 15px 10px;
 }
-a.btn-btt {
+#footer li {
+  margin-top: .5em;
+}
+#footer a.btn-btt {
   background: #434343;
-  color: #fff;
+  color: #bbbdbf;
   padding: .5em 1em;
 }
-a.btn-btt:focus,
-a.btn-btt:hover {
+#footer a.btn-btt:focus,
+#footer a.btn-btt:hover {
   background: #b81e0d;
+  color: #fff;
+}
+#footer a.btn-btt:before {
+  content: '\f077';
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  margin-right: 4px;
+  text-decoration: inherit;
+}
+#footer .menu a[href="/user/login"]:before {
+  content: '\f023';
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  margin-right: 4px;
+  text-decoration: inherit;
+}
+#footer .menu a[href="/user"]:before {
+  content: '\f007';
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  margin-right: 4px;
+  text-decoration: inherit;
+}
+#footer .menu a[href="/user/logout"]:before {
+  content: '\f011';
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  margin-right: 3px;
+  text-decoration: inherit;
 }
 
 /* Hide facet '+' and '-' links */
@@ -103,7 +163,7 @@ a.btn-btt:hover {
   display: none;
 }
 
-/* Islandora solr search results consistent table row border */
+/* Islandora solr search results: consistent table row border */
 .table td {
   border-bottom: 1px dotted #ccc;
 }
