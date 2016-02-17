@@ -43,6 +43,10 @@ ul.hidden + a.soft-limit:before {
 #menu-bar-wrapper ul.menu ul {
   border: none;
 }
+/* Hide redundant Superfish cloned parent link in responsive submenu */
+#menu-bar-wrapper ul.menu ul .sf-clone-parent {
+  display: none;
+}
 #menu-bar-wrapper ul.menu li a:hover,
 #menu-bar-wrapper ul.menu li a:focus,
 #menu-bar-wrapper ul.menu li a:active,
