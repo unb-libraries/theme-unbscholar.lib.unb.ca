@@ -37,6 +37,32 @@ regions[panel_third_4] = 'Panel third column 4'
 regions[panel_third_5] = 'Panel third column 5'
 regions[panel_third_6] = 'Panel third column 6'
 
+;*************************************************
+;*********** GRID (for Nucleus 1.1+) *************
+;*************************************************
+supported_grids[12] = '12 Columns'
+supported_grids[16] = '16 Columns'
+supported_grids[24] = '24 Columns'
+supported_grids[30] = '30 Columns'
+
+;*************************************************
+;************** SUPERFISH & QUICKTABS ************
+;*************************************************
+superfish_styles[zircon] = 'Zircon Style for Superfish'
+quicktabs_styles[zircon] = 'Zircon Style for Quicktabs'
+
+;*************************************************
+;********************* FONTS *********************
+;*************************************************
+default_fonts[sss] = 'Calibri, Candara, Helvetica Neue, Trebuchet MS, Arial, Helvetica, sans-serif'
+default_fonts[ssl] = 'Verdana, Geneva, Arial, Helvetica, sans-serif'
+default_fonts[a] = 'Arial, Helvetica, sans-serif'
+default_fonts[ss] = 'Garamond, Perpetua, Times New Roman, serif'
+default_fonts[sl] = 'Georgia, Baskerville, Palatino, Palatino Linotype, Book Antiqua, Times New Roman, serif'
+default_fonts[m] = 'Segoe UI, Myriad Pro, Myriad, Arial, Helvetica, sans-serif;'
+default_fonts[l] = 'Lucida Sans Unicode, Lucida Sans, Lucida Grande, Verdana, Geneva, sans-serif'
+default_fonts[ms] = 'Consolas, Monaco, Courier New, Courier, monospace'
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
