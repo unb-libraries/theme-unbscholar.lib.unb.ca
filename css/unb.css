@@ -203,3 +203,24 @@ ul.pager {
 .table td {
   border-bottom: 1px dotted #ccc;
 }
+
+/* Metadata 'Details' fieldset override */
+fieldset.islandora-metadata dl {
+  margin-top: 0;
+}
+fieldset.islandora-metadata dt,
+fieldset.islandora-metadata dd {
+  border-top: none;
+  display block;
+}
+fieldset.islandora-metadata dt {
+  font-weight: 500;
+  text-decoration: underline;
+}
+fieldset.islandora-metadata dd {
+  font-weight: 300;
+  margin-bottom: .5em;
+  margin-left: 1em;
+  padding-top: 0;
+  width: 100%;
+}
