@@ -224,3 +224,17 @@ fieldset.islandora-metadata dd {
   padding-top: 0;
   width: 100%;
 }
+
+/* Improve layout for Manage > Datastream table (many columns) on smaller width displays */
+table.manage-datastreams {
+  font-size: smaller;
+  table-layout: fixed;
+}
+table.manage-datastreams td,
+table.manage-datastreams th {
+  padding: .75em .5em;
+}
+table.manage-datastreams .datastream-label,
+table.manage-datastreams .datastream-mime {
+  word-wrap: break-word
+}
