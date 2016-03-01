@@ -3,8 +3,13 @@ html { font-size: .8em; }
 
 /* Tighten white space->wrapped table cell text & sidebar facets, 'show' icons */
 .sidebar li,
+.table,
 .view-content table {
-  line-height: 1.2em;
+  line-height: 1.3em;
+}
+.table td,
+.view-content table td {
+  vertical-align: baseline;
 }
 .block ul.islandora-solr-facet {
   margin: 0;
