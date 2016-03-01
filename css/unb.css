@@ -243,3 +243,6 @@ table.manage-datastreams .datastream-label,
 table.manage-datastreams .datastream-mime {
   word-wrap: break-word
 }
+.messages a {
+  font-weight: bold;
+}
