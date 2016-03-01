@@ -37,13 +37,13 @@ ul.hidden + a.soft-limit:before {
 }
 #menu-bar-wrapper ul.menu li {
   background: none;
+  padding: 0;
 }
-#menu-bar-wrapper ul.menu li a.active {
-  background: #434343;
-}
-#menu-bar-wrapper a:focus,
-#menu-bar-wrapper a:hover {
-  color: #d9d9d9;
+
+#menu-bar-wrapper ul.menu ul li a:focus,
+#menu-bar-wrapper ul.menu ul li a:hover {
+  background: #000;
+  color: #fff;
 }
 #menu-bar-wrapper ul.menu ul {
   border: none;
@@ -52,11 +52,11 @@ ul.hidden + a.soft-limit:before {
 #menu-bar-wrapper ul.menu ul .sf-clone-parent {
   display: none;
 }
+#menu-bar-wrapper ul.menu li:hover>a,
 #menu-bar-wrapper ul.menu li a:hover,
-#menu-bar-wrapper ul.menu li a:focus,
-#menu-bar-wrapper ul.menu li a:active,
-#menu-bar-wrapper ul.menu li a.active {
-  background: #2f2f2f;
+#menu-bar-wrapper ul.menu li a:focus {
+  background: #4d4d4d;
+  color: #fff;
 }
 #menu-bar-wrapper ul.menu ul li a {
   color: #d9d9d9;
