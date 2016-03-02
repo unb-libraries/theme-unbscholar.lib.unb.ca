@@ -256,3 +256,30 @@ table.manage-datastreams .datastream-mime {
 .messages a {
   font-weight: bold;
 }
+
+a[href$=".pdf"]:before {
+  color: #e81109;
+  content: '\f1c1';
+  font-family: FontAwesome;
+  margin-left: 2px;
+  margin-right: .25em;
+  text-decoration: none;
+}
+
+/* responsive overrides */
+@media (max-width: 959px) {
+  #name-and-slogan {
+    float: none;
+    text-align:center;
+  }
+  .site-slogan {
+    text-align: center;
+  }
+  #menu-bar-wrapper ul.menu li {
+    float: none;
+  }
+}
+.responsive-menu-button {
+    margin-left: .5em;
+    text-align: left;
+}
