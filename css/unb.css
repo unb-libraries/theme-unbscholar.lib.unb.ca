@@ -32,6 +32,13 @@ ul.hidden + a.soft-limit:before {
 }
 
 /* Main Menu bar overrides */
+.sf-accordion-toggle { display: none; }
+.responsive-menu-button,
+.responsive-menu-button:focus,
+.responsive-menu-button:hover {
+  color: #fff;
+}
+
 #menu-bar-wrapper {
   background: #b81e0d;
 }
