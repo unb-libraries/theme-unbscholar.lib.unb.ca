@@ -156,6 +156,9 @@ ul.pager {
   margin: 0;
   padding: 15px 10px;
 }
+#footer {
+  font-size: 1.05em;
+}
 #footer li {
   margin-top: .5em;
 }
