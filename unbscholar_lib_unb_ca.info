@@ -67,3 +67,8 @@ default_fonts[ms] = 'Consolas, Monaco, Courier New, Courier, monospace'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 stylesheets[all][] = css/unb.css
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+scripts[] = js/unbscholar.js

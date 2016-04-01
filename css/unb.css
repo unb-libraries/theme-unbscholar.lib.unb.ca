@@ -1,5 +1,59 @@
 /* Increase base font size */
-html { font-size: .8em; }
+html {
+  font-size: .85em;
+}
+
+/* Override Zircon gray background */
+body {
+  background: #fff;
+}
+
+/* Main content and footer wrapper border+shadow */
+#main-wrapper > .container,
+#footer-wrapper > .container {
+  -webkit-border-radius: 0;
+  -webkit-box-shadow: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+#main-content > .grid-inner {
+  padding: 0;
+}
+/* Hide front title */
+.front #page-title {
+  display: none;
+}
+.front ul.menu {
+  margin-left: 0;
+  margin-top: .5em;
+}
+.front ul.menu li.leaf {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+/*
+.front .panel-col-bottom {
+  background-image: url(../images/free-unb-photo.jpg);
+  background-position: center 15%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+*/
+/* Front Search block overrides */
+#home-search-block,
+#publish-research {
+  border: 1px solid #000;
+  padding: 3em 0;
+  text-align: center;
+}
+#home-search-block #edit-islandora-simple-search-query {
+  width: 49%;
+}
+#publish-research .description {
+  margin-top:4em;
+}
 
 /* Tighten white space->wrapped table cell text & sidebar facets, 'show' icons */
 .sidebar li,
@@ -32,21 +86,20 @@ ul.hidden + a.soft-limit:before {
 }
 
 /* Main Menu bar overrides */
-.sf-accordion-toggle { display: none; }
-.responsive-menu-button,
-.responsive-menu-button:focus,
-.responsive-menu-button:hover {
-  color: #fff;
+.sf-menu.sf-style-white li {
+  background: #fff;
 }
-
-#menu-bar-wrapper {
-  background: #b81e0d;
+.sf-menu.sf-style-white a.sf-depth-1 {
+  border: none;
+}
+a > .sf-sub-indicator {
+  right: 1.25em;
+  top: .5em;
 }
 #menu-bar-wrapper ul.menu li {
   background: none;
   padding: 0;
 }
-
 #menu-bar-wrapper ul.menu ul li a:focus,
 #menu-bar-wrapper ul.menu ul li a:hover {
   background: #000;
@@ -56,7 +109,7 @@ ul.hidden + a.soft-limit:before {
   border: none;
 }
 /* Hide redundant Superfish cloned parent link in responsive submenu */
-#menu-bar-wrapper ul.menu ul .sf-clone-parent {
+.block ul.menu .sf-clone-parent {
   display: none;
 }
 #menu-bar-wrapper ul.menu li:hover>a,
@@ -98,14 +151,10 @@ span.button input.form-submit {
   text-transform: capitalize;
 }
 
-/* Front Search block overrides */
-#home-search-block {
-  text-align: center;
+/* Utility classes */
+.extra-padding {
+  padding: 1em 2em;
 }
-#home-search-block #edit-islandora-simple-search-query {
-  width: 49%;
-}
-
 .table,
 .views-table {
   width: 100%;
@@ -115,22 +164,28 @@ span.button input.form-submit {
 ul.pager {
   margin: 1em 0;
 }
+ul.pager li a,
+ul.pager li span {
+  padding: .75em 1em;
+}
 .item-list {
   width: 100%;
 }
 .item-list ul.pager li.pager-current,
-.item-list ul.pager li.pager-ellipsis,
-.item-list ul li a {
+.item-list ul.pager li.pager-ellipsis {
   padding: .5em 1em;
 }
-.item-list ul li a {
-  background: #434343;
-  color: #fff;
+
+/* header menu, top right */
+.block  ul.menu>li {
+  border: none;
+  display: inline-block;
+  margin-top: 1.5em;
 }
-.item-list ul li a:focus,
-.item-list ul li a:hover {
-  background: #b81e0d;
+.block ul.menu li a {
+  background: none;
 }
+
 
 /* Footer overrides */
 #breadcrumb-wrapper {
@@ -150,18 +205,36 @@ ul.pager {
   background: none;
 }
 #footer-wrapper .grid-inner {
-  background: #434343;
-  border-radius: 5px;
-  border-top: none;
+  background: #393E44;
   margin: 0;
-  padding: 5px 10px;
+  padding: 1.5em;
 }
+#footer-wrapper .block-menu { width: 80%; }
 #footer {
   font-size: 1.05em;
 }
+#footer #block-block-2 {
+  width:20%;
+  text-align: right;
+}
+#footer ul.menu { width: 100%; }
+#footer div>ul.menu>li.expanded {
+  border: none;
+  color: #fcfcfc;
+  margin-right: 1%;
+  padding:0;
+  text-decoration: underline;
+  width: 38%;
+}
+#footer div>ul.menu>li.first {
+  width: 21%;
+}
+
 #footer li {
   margin-top: .5em;
 }
+#footer ul.menu li a { width: 100%; }
+
 #footer a.btn-btt {
   background: #434343;
   color: #bbbdbf;
@@ -199,6 +272,7 @@ ul.pager {
   margin-right: 4px;
   text-decoration: inherit;
 }
+/*
 #footer .menu a[href="/user/logout"]:before {
   content: '\f011';
   display: inline-block;
@@ -208,7 +282,7 @@ ul.pager {
   margin-right: 3px;
   text-decoration: inherit;
 }
-
+*/
 /* Hide facet '+' and '-' links */
 .plusminus {
   display: none;
@@ -282,4 +356,31 @@ a[href$=".pdf"]:before {
 .responsive-menu-button {
     margin-left: .5em;
     text-align: left;
+}
+
+/* Footer menu */
+
+#footer ul.menu ul.menu,
+#footer ul.menu ul.menu li {
+  border: none;
+  float: none;
+  margin: 0;
+}
+
+#footer ul.menu ul.menu {
+  clear: both;
+  margin-left: 1em;
+}
+
+/* remove line break between sort text and directional icon  */
+th.active a {
+  margin-right: 6px;
+  white-space: nowrap;
+}
+
+/* fix large directional sort icons */
+@media only screen {
+ th.views-field img {
+    width: 13px;
+  }
 }
