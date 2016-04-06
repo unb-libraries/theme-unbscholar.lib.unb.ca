@@ -8,6 +8,14 @@ body {
   background: #fff;
 }
 
+#block-islandora-solr-simple .block-inner {
+  padding: 0;
+}
+
+#name-and-slogan {
+  margin-bottom: .75em;
+}
+
 /* Main content and footer wrapper border+shadow */
 #main-wrapper > .container,
 #footer-wrapper > .container {
@@ -17,8 +25,13 @@ body {
   border-radius: 0;
   box-shadow: none;
 }
-#main-content > .grid-inner {
-  padding: 0;
+/*#main-content > .grid-inner*/
+#header {
+  border-bottom: 1px solid #000;
+  padding: 0 0 .5em 0;
+}
+.region-header {
+  max-width: 350px;
 }
 /* Hide front title */
 .front #page-title {
@@ -49,6 +62,7 @@ body {
   text-align: center;
 }
 #home-search-block #edit-islandora-simple-search-query {
+  margin-bottom: .75em;
   width: 49%;
 }
 #publish-research .description {
@@ -85,51 +99,49 @@ ul.hidden + a.soft-limit:before {
   content: '\f0fe';
 }
 
-/* Main Menu bar overrides */
-.sf-menu.sf-style-white li {
+/*** Main Menu Superfish>Style=None rules ***/
+.sf-main-menu .sf-depth-1 {
   background: #fff;
 }
-.sf-menu.sf-style-white a.sf-depth-1 {
+.sf-main-menu a.sf-depth-1 {
   border: none;
+}
+ul.sf-main-menu li.menuparent > a {
+  padding-right:1.5em;
 }
 a > .sf-sub-indicator {
-  right: 1.25em;
+  background: url('../images/arrows-777777.png') no-repeat -10px -100px;
   top: .5em;
 }
-#menu-bar-wrapper ul.menu li {
-  background: none;
-  padding: 0;
+.sf-main-menu .sf-depth-1 ul {
+  background: #393E44;
 }
-#menu-bar-wrapper ul.menu ul li a:focus,
-#menu-bar-wrapper ul.menu ul li a:hover {
-  background: #000;
+.sf-main-menu .sf-depth-1 ul li.sf-depth-2 {
+  background: inherit;
+  border-color: #555;
+}
+.sf-main-menu .sf-depth-1 ul li.sf-depth-2 a {
   color: #fff;
+  padding:.75em;
 }
-#menu-bar-wrapper ul.menu ul {
-  border: none;
+.sf-main-menu .sf-depth-1 ul li.sf-depth-2 a:focus,
+.sf-main-menu .sf-depth-1 ul li.sf-depth-2 a:hover,
+.sf-main-menu .sf-depth-1 ul li.sf-depth-2 a.active {
+  color: #fc0
 }
-/* Hide redundant Superfish cloned parent link in responsive submenu */
+.sf-main-menu .sf-depth-1 ul li.sf-depth-2 a.active:hover {
+  cursor: default;
+}
+/* Hide redundant Superfish cloned parent link in submenu */
 .block ul.menu .sf-clone-parent {
   display: none;
 }
-#menu-bar-wrapper ul.menu li:hover>a,
-#menu-bar-wrapper ul.menu li a:hover,
-#menu-bar-wrapper ul.menu li a:focus {
-  background: #4d4d4d;
-  color: #fff;
-}
-#menu-bar-wrapper ul.menu ul li a {
-  color: #d9d9d9;
-}
-.responsive-menu-button:before {
-  content: '\f0c9';
-  display: inline-block;
-  font-family: FontAwesome;
-  font-size: larger;
-  font-style: normal;
-  font-weight: normal;
-  margin-right: 3px;
-  text-decoration: inherit;
+/* Manually adjust responsive menu layout */
+@media (max-width: 959px) {
+  #header .region-header {
+    float: none;
+    margin: 0 auto;
+  }
 }
 
 /* Search button overrides */
@@ -148,6 +160,7 @@ a > .sf-sub-indicator {
 }
 span.button input.form-submit {
   background: #434343;
+  padding: 5px 10px;
   text-transform: capitalize;
 }
 
@@ -173,21 +186,25 @@ ul.pager li span {
 }
 .item-list ul.pager li.pager-current,
 .item-list ul.pager li.pager-ellipsis {
-  padding: .5em 1em;
+  padding: .75em 1em;
 }
 
 /* header menu, top right */
 .block  ul.menu>li {
   border: none;
   display: inline-block;
-  margin-top: 1.5em;
 }
-.block ul.menu li a {
+.block-superfish ul.menu li a {
   background: none;
 }
 
 
 /* Footer overrides */
+#footer ul.menu li a:focus,
+#footer ul.menu li a:hover {
+  text-decoration: underline;
+}
+
 #breadcrumb-wrapper {
   border-top: none;
   margin: 0;
@@ -254,6 +271,7 @@ ul.pager li span {
   margin-right: 4px;
   text-decoration: inherit;
 }
+/*
 #footer .menu a[href="/user/login"]:before {
   content: '\f023';
   display: inline-block;
@@ -272,7 +290,7 @@ ul.pager li span {
   margin-right: 4px;
   text-decoration: inherit;
 }
-/*
+
 #footer .menu a[href="/user/logout"]:before {
   content: '\f011';
   display: inline-block;
