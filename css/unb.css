@@ -7,6 +7,16 @@ html {
 body {
   background: #fff;
 }
+#header-wrapper {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+#main-wrapper,
+#overlay-container {
+  padding-top: 116px;
+}
 
 #block-islandora-solr-simple .block-inner {
   padding: 0;
@@ -44,6 +54,8 @@ body {
 .front ul.menu li.leaf {
   list-style-image: none;
   list-style-type: none;
+  line-height: 1.1em;
+  margin-bottom: .5em;
   margin-left: 0;
 }
 /*
@@ -115,6 +127,8 @@ a > .sf-sub-indicator {
 }
 .sf-main-menu .sf-depth-1 ul {
   background: #393E44;
+  box-shadow: 0 1px 4px #4f4f4f;
+  z-index: 999999;
 }
 .sf-main-menu .sf-depth-1 ul li.sf-depth-2 {
   background: inherit;
@@ -135,13 +149,6 @@ a > .sf-sub-indicator {
 /* Hide redundant Superfish cloned parent link in submenu */
 .block ul.menu .sf-clone-parent {
   display: none;
-}
-/* Manually adjust responsive menu layout */
-@media (max-width: 959px) {
-  #header .region-header {
-    float: none;
-    margin: 0 auto;
-  }
 }
 
 /* Search button overrides */
@@ -235,7 +242,7 @@ ul.pager li span {
   text-align: right;
 }
 #footer ul.menu { width: 100%; }
-#footer div>ul.menu>li.expanded {
+#footer div>ul.menu>li {
   border: none;
   color: #fcfcfc;
   margin-right: 1%;
@@ -250,7 +257,11 @@ ul.pager li span {
 #footer li {
   margin-top: .5em;
 }
-#footer ul.menu li a { width: 100%; }
+#footer ul.menu li a {
+  line-height: 1.1em;
+  margin: .15em 0;
+  width: 100%;
+}
 
 #footer a.btn-btt {
   background: #434343;
@@ -271,36 +282,7 @@ ul.pager li span {
   margin-right: 4px;
   text-decoration: inherit;
 }
-/*
-#footer .menu a[href="/user/login"]:before {
-  content: '\f023';
-  display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  margin-right: 4px;
-  text-decoration: inherit;
-}
-#footer .menu a[href="/user"]:before {
-  content: '\f007';
-  display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  margin-right: 4px;
-  text-decoration: inherit;
-}
 
-#footer .menu a[href="/user/logout"]:before {
-  content: '\f011';
-  display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  margin-right: 3px;
-  text-decoration: inherit;
-}
-*/
 /* Hide facet '+' and '-' links */
 .plusminus {
   display: none;
@@ -396,9 +378,72 @@ th.active a {
   white-space: nowrap;
 }
 
-/* fix large directional sort icons */
+/*** Responsive breakpoints, overrides ***/
+/* Large table column sort directional icon fix */
 @media only screen {
  th.views-field img {
     width: 13px;
+  }
+}
+/* Responsive header, main wrapper, footer menu styles */
+@media (max-width: 959px) {
+  #main-wrapper {
+    padding-top: 192px;
+  }
+  /* Account for no header search box on front page */
+  .front #main-wrapper {
+    padding-top: 142px;
+  }
+  #header .region-header {
+    float: none;
+    margin: 0 auto;
+  }
+  #footer-wrapper .block-menu {
+    width: 100%;
+  }
+  #footer div>ul.menu>li {
+    float: left;
+    width: 38%;
+  }
+  #footer-wrapper #footer ul.menu li {
+    display: block;
+    text-align: left;
+  }
+  #footer-wrapper #footer ul.menu li a {
+    margin: .5em 0;
+  }
+  /* Bottom UNB Logo */
+  #footer #block-block-2 {
+    margin-top: .75em;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media (max-width:767px) {
+  #header-wrapper {
+    position: relative;
+    /* Superfish dropdown over breadcrumb fix */
+    z-index: 9;
+  }
+  #main-wrapper {
+    padding-top: 0;
+  }
+  /* Collapse+adjust Browse Collections+New panel columns */
+  .front .panel-panel {
+    width: 100%;
+  }
+  .front .panel-2col-stacked .panel-panel .inside {
+    margin: 0;
+  }
+  .front .panel-2col-stacked .panel-panel .inside .extra-padding {
+    padding: 0.15em 2em;
+  }
+}
+@media (max-width: 479px) {
+  /* Footer adjust for small-width>portrait layout */
+  #footer div>ul.menu>li,
+  #footer div>ul.menu>li.first {
+    margin-bottom: 1em;
+    width: 100%;
   }
 }
