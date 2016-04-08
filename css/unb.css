@@ -111,6 +111,9 @@ ul.hidden + a.soft-limit:before {
 }
 
 /*** Main Menu Superfish>Style=None rules ***/
+#header .block-superfish {
+  display: inline-block;
+}
 .sf-main-menu .sf-depth-1 {
   background: #fff;
 }
@@ -414,6 +417,7 @@ th.active a {
   #header .region-header {
     float: none;
     margin: 0 auto;
+    text-align: center;
   }
   #footer-wrapper .block-menu {
     width: 100%;
