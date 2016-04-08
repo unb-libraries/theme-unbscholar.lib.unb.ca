@@ -13,8 +13,7 @@ body {
   width: 100%;
   z-index: 99;
 }
-#main-wrapper,
-#overlay-container {
+#main-wrapper {
   padding-top: 116px;
 }
 
