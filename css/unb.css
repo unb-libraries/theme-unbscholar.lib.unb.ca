@@ -443,7 +443,8 @@ th.active a {
     /* Superfish dropdown over breadcrumb fix */
     z-index: 9;
   }
-  #main-wrapper {
+  #main-wrapper,
+  .front #main-wrapper {
     padding-top: 0;
   }
   /* Collapse+adjust Browse Collections+New panel columns */
