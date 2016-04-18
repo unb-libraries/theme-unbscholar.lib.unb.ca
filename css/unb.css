@@ -13,8 +13,13 @@ body {
   width: 100%;
   z-index: 99;
 }
-#main-wrapper {
+/* Ensure system messages and/or main content display below sticky header */
+#main-wrapper,
+#system-messages-wrapper {
   padding-top: 116px;
+}
+#system-messages-wrapper + #main-wrapper {
+  padding: 0;
 }
 
 #block-islandora-solr-simple .block-inner {
