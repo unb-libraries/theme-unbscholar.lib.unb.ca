@@ -26,6 +26,9 @@ body {
   padding: 0;
 }
 
+#logo img {
+  max-height: 80px;
+}
 #name-and-slogan {
   margin-bottom: .75em;
 }
@@ -118,7 +121,9 @@ ul.hidden + a.soft-limit:before {
 /*** Main Menu Superfish>Style=None rules ***/
 #header .block-superfish {
   display: inline-block;
+  float: right;
 }
+
 .sf-main-menu .sf-depth-1 {
   background: #fff;
 }
@@ -234,6 +239,7 @@ ul.pager li span {
 /* Footer overrides */
 #footer ul.menu li a:focus,
 #footer ul.menu li a:hover {
+  color: #fc0;
   text-decoration: underline;
 }
 
@@ -272,7 +278,6 @@ ul.pager li span {
   color: #fcfcfc;
   margin-right: 1%;
   padding:0;
-  text-decoration: underline;
   width: 38%;
 }
 #footer div>ul.menu>li.first {
