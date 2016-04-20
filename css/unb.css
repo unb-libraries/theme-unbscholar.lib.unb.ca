@@ -42,7 +42,10 @@ body {
   border-radius: 0;
   box-shadow: none;
 }
-/*#main-content > .grid-inner*/
+#main-content > .grid-inner {
+  padding:0;
+}
+
 #header {
   border-bottom: 1px solid #000;
   padding: 0 0 .5em 0;
@@ -54,6 +57,24 @@ body {
 .front #page-title {
   display: none;
 }
+/* Front panels override */
+.front .panel-2col-stacked .panel-col-first .inside,
+.front .panel-2col-stacked .panel-col-last .inside {
+  margin: 0;
+}
+.front .center-wrapper {
+  border-collapse: separate;
+  border-spacing: 1.5em;
+  display: table;
+  width: 100%;
+}
+.front .center-wrapper .panel-panel {
+  border: 1px solid #dadada;
+  display: table-cell;
+  float: none;
+  width: 50%;
+}
+
 .front ul.menu {
   margin-left: 0;
   margin-top: .5em;
@@ -65,20 +86,22 @@ body {
   margin-bottom: .5em;
   margin-left: 0;
 }
-/*
-.front .panel-col-bottom {
-  background-image: url(../images/free-unb-photo.jpg);
-  background-position: center 15%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-*/
+
 /* Front Search block overrides */
 #home-search-block,
 #publish-research {
-  border: 1px solid #000;
-  padding: 3em 0;
   text-align: center;
+}
+#home-search-block {
+  border: 1px solid #000;
+  padding: 2em 0;
+}
+#publish-research {
+  background: #ededed;
+  padding: 1em 0;
+}
+#publish-research .pane-content {
+  margin-top: 6em;
 }
 #home-search-block #edit-islandora-simple-search-query {
   margin-bottom: .75em;
@@ -94,6 +117,7 @@ body {
 .view-content table {
   line-height: 1.3em;
 }
+
 .table td,
 .view-content table td {
   vertical-align: baseline;
@@ -119,11 +143,12 @@ ul.hidden + a.soft-limit:before {
 }
 
 /*** Main Menu Superfish>Style=None rules ***/
-#header .block-superfish {
-  display: inline-block;
+.region-header .block-superfish {
   float: right;
 }
-
+#header .block-superfish {
+  display: inline-block;
+}
 .sf-main-menu .sf-depth-1 {
   background: #fff;
 }
@@ -164,7 +189,8 @@ a > .sf-sub-indicator {
 }
 
 /* Search button overrides */
-.block-islandora-solr #edit-simple {
+.block-islandora-solr #edit-simple,
+.block-islandora-solr #edit-simple--2 {
   border-spacing: 2px;
   display: table;
   width: 100%;
@@ -200,13 +226,6 @@ span.button input.form-submit {
   width: 99.5%;
 }
 
-/* UNB Scholar Object Layout */
-.ir_thesisCModel img,
-.ir_citationCModel img {
-  border: 1px solid #dadada;
-  display: block;
-  margin: 1em auto;
-}
 .islandora-inline-metadata dt {
   padding-left: 0;
   width: 15%;
@@ -215,30 +234,16 @@ span.button input.form-submit {
   padding-left: 0;
   width: 85%;
 }
-/* Metadata 'Details' fieldset */
-fieldset.islandora-metadata dl {
-  margin-top: 0;
-}
-fieldset.islandora-metadata dt,
-fieldset.islandora-metadata dd {
-  border-top: none;
-  display block;
-}
-fieldset.islandora-metadata dt {
-  font-weight: 500;
-  text-decoration: underline;
-}
-fieldset.islandora-metadata dd {
-  font-weight: 300;
-  margin-bottom: .5em;
-  margin-left: 1em;
-  padding-top: 0;
-  width: 100%;
+.ir_thesisCModel img,
+.ir_citationCModel img {
+  border: 1px solid #dadada;
+  display: block;
+  margin: 1em auto;
 }
 
 /* Utility classes */
 .extra-padding {
-  padding: 1em 2em;
+  padding: 0 1.5em;
 }
 .table,
 .views-table {
@@ -357,6 +362,27 @@ ul.pager li span {
 /* Islandora solr search results consistent table row border */
 .table td {
   border-bottom: 1px dotted #ccc;
+}
+
+/* Metadata 'Details' fieldset override */
+fieldset.islandora-metadata dl {
+  margin-top: 0;
+}
+fieldset.islandora-metadata dt,
+fieldset.islandora-metadata dd {
+  border-top: none;
+  display block;
+}
+fieldset.islandora-metadata dt {
+  font-weight: 500;
+  text-decoration: underline;
+}
+fieldset.islandora-metadata dd {
+  font-weight: 300;
+  margin-bottom: .5em;
+  margin-left: 1em;
+  padding-top: 0;
+  width: 100%;
 }
 
 /* Improve layout for Manage > Datastream table (many columns) on smaller width displays */
