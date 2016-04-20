@@ -200,6 +200,42 @@ span.button input.form-submit {
   width: 99.5%;
 }
 
+/* UNB Scholar Object Layout */
+.ir_thesisCModel img,
+.ir_citationCModel img {
+  border: 1px solid #dadada;
+  display: block;
+  margin: 1em auto;
+}
+.islandora-inline-metadata dt {
+  padding-left: 0;
+  width: 15%;
+}
+.islandora-inline-metadata dd {
+  padding-left: 0;
+  width: 85%;
+}
+/* Metadata 'Details' fieldset */
+fieldset.islandora-metadata dl {
+  margin-top: 0;
+}
+fieldset.islandora-metadata dt,
+fieldset.islandora-metadata dd {
+  border-top: none;
+  display block;
+}
+fieldset.islandora-metadata dt {
+  font-weight: 500;
+  text-decoration: underline;
+}
+fieldset.islandora-metadata dd {
+  font-weight: 300;
+  margin-bottom: .5em;
+  margin-left: 1em;
+  padding-top: 0;
+  width: 100%;
+}
+
 /* Utility classes */
 .extra-padding {
   padding: 1em 2em;
@@ -321,27 +357,6 @@ ul.pager li span {
 /* Islandora solr search results consistent table row border */
 .table td {
   border-bottom: 1px dotted #ccc;
-}
-
-/* Metadata 'Details' fieldset override */
-fieldset.islandora-metadata dl {
-  margin-top: 0;
-}
-fieldset.islandora-metadata dt,
-fieldset.islandora-metadata dd {
-  border-top: none;
-  display block;
-}
-fieldset.islandora-metadata dt {
-  font-weight: 500;
-  text-decoration: underline;
-}
-fieldset.islandora-metadata dd {
-  font-weight: 300;
-  margin-bottom: .5em;
-  margin-left: 1em;
-  padding-top: 0;
-  width: 100%;
 }
 
 /* Improve layout for Manage > Datastream table (many columns) on smaller width displays */
