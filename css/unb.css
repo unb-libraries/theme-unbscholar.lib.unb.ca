@@ -181,6 +181,7 @@ a > .sf-sub-indicator {
 .sf-main-menu .sf-depth-1 ul {
   background: #393E44;
   box-shadow: 0 1px 4px #4f4f4f;
+  min-width: 16em;
   z-index: 999999;
 }
 .sf-main-menu .sf-depth-1 ul li.sf-depth-2 {
@@ -478,7 +479,7 @@ th.active a {
     text-align:center;
   }
   #block-superfish-2 {
-    margin-right: 1.5em; /* same as superfish menu link padding to center */
+    margin-right: 1.5em; /* same as Superfish menu link padding to center */
   }
   .not-logged-in .region-header .block-superfish {
     float: none; /* anonymous get 1 Superfish menu block: no float to center */
@@ -497,6 +498,9 @@ th.active a {
   }
   #footer-wrapper .block-menu {
     width: 100%;
+  }
+  .sf-main-menu .sf-depth-1 ul {
+    min-width: 0;
   }
   #footer div>ul.menu>li {
     float: left;
