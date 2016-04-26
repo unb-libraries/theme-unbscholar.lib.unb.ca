@@ -118,6 +118,22 @@ body {
   line-height: 1.3em;
 }
 
+/* Views column header sort link with indicator */
+thead th:not(.active) a {
+  white-space: nowrap;
+}
+thead th:not(.active) a:after {
+  content: '\f0dc';
+  display: inline-block;
+  font-family: FontAwesome;
+  margin-left: .25em;
+  text-decoration: none;
+}
+thead th a:focus,
+thead th a:hover {
+  color: #fc0;
+}
+
 .table td,
 .view-content table td {
   vertical-align: baseline;
