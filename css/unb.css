@@ -225,6 +225,35 @@ span.button input.form-submit {
   padding: 5px 10px;
   text-transform: capitalize;
 }
+
+/* Solr Search results*/
+.islandora-solr-search-results {
+  margin-top: .5em;
+}
+.islandora-solr-search-results .solr-fields dt:not(.dc-title) {
+  padding-left: 1em;
+}
+.islandora-solr-search-results .solr-fields dt,
+.islandora-solr-search-results .solr-fields dd {
+  border-top: none;
+}
+.islandora-solr-search-results .solr-fields dd {
+  line-height: 120%;
+}
+.islandora-solr-search-results .islandora-inline-metadata dt,
+.islandora-solr-search-results .islandora-inline-metadata dd {
+  padding: 0;
+}
+.islandora-solr-search-results dt.dc-title,
+.islandora-solr-search-results dt.mods-abstract-t {
+  display:none;
+}
+.islandora-solr-search-results dd.dc-title,
+.islandora-solr-search-results dd.mods-abstract-t {
+  margin: .5em 0;
+  width: 100%;
+}
+
 /* Views exposed widget */
 .views-exposed-widget span.button input.form-submit {
   box-shadow: 0 1px 1px #555;
