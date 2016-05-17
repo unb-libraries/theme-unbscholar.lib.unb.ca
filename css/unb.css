@@ -427,14 +427,17 @@ fieldset.islandora-metadata dd {
 }
 fieldset.islandora-metadata dt {
   font-weight: 500;
+  padding-bottom: 0;
   text-decoration: underline;
 }
 fieldset.islandora-metadata dd {
   font-weight: 300;
-  margin-bottom: .5em;
   margin-left: 1em;
   padding-top: 0;
   width: 100%;
+}
+fieldset.islandora-metadata dd p {
+  margin: 0;
 }
 
 /* Improve layout for Manage > Datastream table (many columns) on smaller width displays */
