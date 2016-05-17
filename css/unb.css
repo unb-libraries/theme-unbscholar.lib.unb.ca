@@ -278,6 +278,22 @@ span.button input.form-submit {
   width: 99.5%;
 }
 
+/* Select list filter layout for Browse pages */
+.views-widget-filter-catch_all_fields_mt {
+  margin-bottom: 1em;
+}
+.views-exposed-form .views-exposed-widgets div[class^="views-exposed-widget views-widget-filter-mods"] {
+  width: 100%;
+}
+div[class^="views-exposed-widget views-widget-filter-mods"] label {
+  float: left;
+  min-width: 165px;
+}
+div[class^="views-exposed-widget views-widget-filter-mods"] select {
+  margin-bottom: .25em;
+  min-width: 150px;
+}
+
 .islandora-inline-metadata dt {
   padding-left: 0;
   width: 15%;
