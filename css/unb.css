@@ -7,6 +7,12 @@ html {
 body {
   background: #fff;
 }
+
+/* Change 1200px page width method to improve responsiveness */
+div.container {
+  max-width: 1200px;
+}
+
 #header-wrapper {
   background: #fff;
   position: fixed;
