@@ -619,4 +619,8 @@ th.active a {
     margin-bottom: 1em;
     width: 100%;
   }
+  /* Small width exposed select widget adjustment */
+  div[class^="views-exposed-widget views-widget-filter-mods"] select {
+    min-width: 97%;
+  }
 }
