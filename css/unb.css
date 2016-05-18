@@ -226,10 +226,22 @@ a > .sf-sub-indicator {
 .block-islandora-solr #edit-islandora-simple-search-query {
   width: 100%;
 }
-span.button input.form-submit {
+
+/* Make reset input button consistent with submit input */
+span.button input.form-submit,
+.views-reset-button input.form-submit {
   background: #434343;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px #555;
+  color: #fff;
+  cursor: pointer;
   padding: 5px 10px;
   text-transform: capitalize;
+}
+.views-reset-button input.form-submit:focus,
+.views-reset-button input.form-submit:hover {
+  background: #c01700;
 }
 
 /* Solr Search results*/
@@ -261,9 +273,6 @@ span.button input.form-submit {
 }
 
 /* Views exposed widget */
-.views-exposed-widget span.button input.form-submit {
-  box-shadow: 0 1px 1px #555;
-}
 .views-exposed-form .views-exposed-widget {
   padding: 0;
 }
