@@ -303,7 +303,7 @@ div[class^="views-exposed-widget views-widget-filter-mods"] label {
 }
 div[class^="views-exposed-widget views-widget-filter-mods"] select {
   margin-bottom: .25em;
-  min-width: 150px;
+  min-width: 270px;
 }
 
 .islandora-inline-metadata dt {
