@@ -229,19 +229,22 @@ a > .sf-sub-indicator {
 
 /* Make reset input button consistent with submit input */
 span.button input.form-submit,
-.views-reset-button input.form-submit {
+.views-reset-button .form-submit {
   background: #434343;
   border: none;
   border-radius: 3px;
   box-shadow: 0 1px 1px #555;
   color: #fff;
   cursor: pointer;
+  display: inline-block;
+  line-height: 120%;
   padding: 5px 10px;
   text-transform: capitalize;
 }
-.views-reset-button input.form-submit:focus,
-.views-reset-button input.form-submit:hover {
+.views-reset-button .form-submit:focus,
+.views-reset-button .form-submit:hover {
   background: #c01700;
+  text-decoration: none;
 }
 
 /* Solr Search results*/
