@@ -290,6 +290,12 @@ span.button input.form-submit,
   width: 99.5%;
 }
 
+/* Vertical margin improvement for View headers */
+.view-header,
+.view-header p {
+  margin: 1em 0;
+}
+
 /* Select list filter layout for Browse pages */
 .views-widget-filter-catch_all_fields_mt {
   margin-bottom: 1em;
