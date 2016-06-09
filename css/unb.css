@@ -59,6 +59,7 @@ div.container {
 .region-header {
   max-width: 350px;
 }
+
 /* Hide front title */
 .front #page-title {
   display: none;
@@ -70,15 +71,17 @@ div.container {
 }
 .front .center-wrapper {
   border-collapse: separate;
-  border-spacing: 1.5em;
   display: table;
   width: 100%;
 }
+.front .panel-col-first p {
+  text-align: justify;
+}
+
 .front .center-wrapper .panel-panel {
-  border: 1px solid #dadada;
   display: table-cell;
   float: none;
-  width: 50%;
+  width: 32%;
 }
 
 .front ul.menu {
@@ -93,28 +96,46 @@ div.container {
   margin-left: 0;
 }
 
+#home_page .form-text {
+  background: #fff;
+  border: 1px solid #434343;
+}
+#home_page .panel-col-top {
+  background: url(/sites/default/files/top-image-1200.jpg) no-repeat center center;
+}
+#home_page .panel-col-bottom {
+  background: url(/sites/default/files/bottom-image-1200.jpg) no-repeat center center;
+}
+#home_page .panel-col-top,
+#home_page .panel-col-bottom {
+  display: table;
+  height: 280px;
+  text-align: center;
+}
+#home_page .panel-col-top .inside,
+#home_page .panel-col-bottom .inside {
+  background: rgba(255,255,255,0.1); /* background image color overlay */
+  display: table-cell;
+  padding: 0 21%;
+  vertical-align: middle;
+}
+
 /* Front Search block overrides */
 #home-search-block,
 #publish-research {
   text-align: center;
 }
-#home-search-block {
-  border: 1px solid #000;
-  padding: 2em 0;
-}
+#home-search-block,
 #publish-research {
-  background: #ededed;
-  padding: 1em 0;
-}
-#publish-research .pane-content {
-  margin-top: 6em;
+  background: rgba(255,255,255,0.8);
+  padding: 1px 1em;
 }
 #home-search-block #edit-islandora-simple-search-query {
   margin-bottom: .75em;
-  width: 49%;
+  width: 80%;
 }
 #publish-research .description {
-  margin-top:4em;
+  margin-top: 1em;
 }
 
 /* Tighten white space->wrapped table cell text & sidebar facets, 'show' icons */
