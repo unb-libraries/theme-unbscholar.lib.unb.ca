@@ -54,6 +54,7 @@ div.container {
 
 #header {
   border-bottom: 1px solid #000;
+  min-height: 84px; /* prevent front & rest site height jump */
   padding: 0 0 .5em 0;
 }
 .region-header {
@@ -64,11 +65,13 @@ div.container {
 .front #page-title {
   display: none;
 }
-/* Front panels override */
-.front .panel-2col-stacked .panel-col-first .inside,
-.front .panel-2col-stacked .panel-col-last .inside {
-  margin: 0;
+
+/* prevent front & rest site vertical shift*/
+.front .block-superfish {
+  margin-top: 42px;
 }
+
+/* Front panels override */
 .front .center-wrapper {
   border-collapse: separate;
   display: table;
@@ -101,10 +104,10 @@ div.container {
   border: 1px solid #434343;
 }
 #home_page .panel-col-top {
-  background: url(/sites/default/files/top-image-1200.jpg) no-repeat center center;
+  background: url(../images/top-image-1200.jpg) no-repeat center center;
 }
 #home_page .panel-col-bottom {
-  background: url(/sites/default/files/bottom-image-1200.jpg) no-repeat center center;
+  background: url(../images/bottom-image-1200.jpg) no-repeat center center;
 }
 #home_page .panel-col-top,
 #home_page .panel-col-bottom {
@@ -112,9 +115,13 @@ div.container {
   height: 280px;
   text-align: center;
 }
+#home_page .panel-col-bottom {
+  height: 230px;
+}
+
 #home_page .panel-col-top .inside,
 #home_page .panel-col-bottom .inside {
-  background: rgba(255,255,255,0.1); /* background image color overlay */
+  /* background: rgba(255,255,255,0.1);  background image color overlay */
   display: table-cell;
   padding: 0 21%;
   vertical-align: middle;
@@ -127,7 +134,8 @@ div.container {
 }
 #home-search-block,
 #publish-research {
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.85); /* from 0.8 */
+  border: 1px solid #666;
   padding: 1px 1em;
 }
 #home-search-block #edit-islandora-simple-search-query {
@@ -571,6 +579,9 @@ th.active a {
   #header {
     text-align:center;
   }
+  .front .block-superfish {
+    margin-top: 0;
+  }
   #block-superfish-2 {
     margin-right: 1.5em; /* same as Superfish menu link padding to center */
   }
@@ -626,12 +637,6 @@ th.active a {
   /* Collapse+adjust Browse Collections+New panel columns */
   .front .panel-panel {
     width: 100%;
-  }
-  .front .panel-2col-stacked .panel-panel .inside {
-    margin: 0;
-  }
-  .front .panel-2col-stacked .panel-panel .inside .extra-padding {
-    padding: 0.15em 2em;
   }
   .front .center-wrapper .panel-panel {
     display: block;
