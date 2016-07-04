@@ -255,6 +255,9 @@ a > .sf-sub-indicator {
 .block-islandora-solr #edit-islandora-simple-search-query {
   width: 100%;
 }
+.form-item-islandora-simple-search-query label {
+  display: none;
+}
 
 /* Make reset input button consistent with submit input */
 span.button input.form-submit,
