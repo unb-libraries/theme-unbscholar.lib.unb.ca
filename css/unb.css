@@ -57,9 +57,6 @@ div.container {
   min-height: 84px; /* prevent front & rest site height jump */
   padding: 0 0 .5em 0;
 }
-.region-header {
-  max-width: 350px;
-}
 
 /* Hide front title */
 .front #page-title {
@@ -194,9 +191,7 @@ ul.hidden + a.soft-limit:before {
 }
 
 /*** Main Menu Superfish>Style=None rules ***/
-.region-header .block-superfish {
-  float: right;
-}
+
 #header .block-superfish {
   display: inline-block;
 }
