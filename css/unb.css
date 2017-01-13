@@ -248,8 +248,12 @@ a > .sf-sub-indicator {
 }
 .block-islandora-solr .form-item-islandora-simple-search-query,
 .block-islandora-solr #edit-islandora-simple-search-query {
-  width: 100%;
+  /* width: 100%; */
 }
+.block-islandora-solr form {
+  float: right;
+}
+
 .form-item-islandora-simple-search-query label {
   display: none;
 }
